@@ -8,7 +8,7 @@ async function startApolloServer(typeDefs, resolvers) {
     typeDefs,
     resolvers,
     // introspection: process.env.NODE_ENV !== "production",
-    introspection,
+    introspection: true,
     dataSources: () => {
       return {
         trackAPI: new TrackAPI(),
